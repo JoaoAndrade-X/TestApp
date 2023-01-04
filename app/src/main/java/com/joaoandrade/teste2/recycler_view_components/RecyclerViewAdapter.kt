@@ -13,7 +13,7 @@ class RecyclerViewAdapter(private val list: ArrayList<RecyclerViewItem>): Recycl
 
     override fun onBindViewHolder(holder: RecyclerViewViewHolder, position: Int) {
         val item = list[position]
-        holder.word.text = item.word
+        holder.word.text = (position + 1).toString()  + " - " + item.word
     }
 
     override fun getItemCount(): Int {
